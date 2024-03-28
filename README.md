@@ -13,7 +13,7 @@ Object detection in dark conditions has always been a great challenge due to the
 `Cuda=10.2, Python=3.8, Pytorch=1.10.1, Detectron2=0.6`
 
 ## 2. Evaluation
-+ For BDD100k, you could use your trained model or use ours pretrained model from: [Baiduyun]() or [Googledrive]()  
++ For BDD100k, you could use your trained model or use ours pretrained model from: [Baiduyun](https://pan.baidu.com/s/1vYYKX9BdlQIHY-Y7E9n5nA?pwd=1234)(1234)or [Google]()  
 + The command for evaluating ISP-Teacher on one RTX3090 GPU is as following:
 ```
 python train_net.py --eval-only --config configs/faster_rcnn_R50_bdd100k.yaml MODEL.WEIGHTS <your weight>.pth
