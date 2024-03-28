@@ -1,7 +1,7 @@
 # ISP-Teacher
 [AAAI24] Official Pytorch Code for **ISP-Teacher: Image Signal Process with Disentanglement Regularization for Unsupervised Domain Adaptive Dark Object Detection**
 
-[Paper Link](https://ojs.aaai.org/index.php/AAAI/article/view/28569)
+Paper is available! [[Paper Link](https://ojs.aaai.org/index.php/AAAI/article/view/28569)]
 
 ![image text](https://github.com/zhangyin1996/ISP-Teacher/blob/main/pipeline.png "Pipeline")
 
