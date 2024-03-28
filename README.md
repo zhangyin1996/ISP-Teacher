@@ -1,0 +1,40 @@
+# ISP-Teacher
+[AAAI24] Official Pytorch Code for **ISP-Teacher: Image Signal Process with Disentanglement Regularization for Unsupervised Domain Adaptive Dark Object Detection**
+
+[Paper Link](https://ojs.aaai.org/index.php/AAAI/article/view/28569)
+
+## Abstract
+Object detection in dark conditions has always been a great challenge due to the complex formation process of low-light images. Currently, the mainstream methods usually adopt domain adaptation with Teacher-Student architecture to solve the dark object detection problem, and they imitate the dark conditions by using non-learnable data augmentation strategies on the annotated source daytime images. Note that these methods neglected to model the intrinsic imaging process, i.e. image signal processing (ISP), which is important for camera sensors to generate low-light images. To solve the above problems, in this paper, we propose a novel method named ISP-Teacher for dark object detection by exploring Teacher-Student architecture from a new perspective (i.e. self-supervised learning based ISP degradation). Specifically, we first design a day-to-night transformation module that consistent with the ISP pipeline of the camera sensors (ISP-DTM) to make the augmented images look more in line with the natural low-light images captured by cameras, and the ISP-related parameters are learned in a self-supervised manner. Moreover, to avoid the conflict between the ISP degradation and detection tasks in a shared encoder, we propose a disentanglement regularization (DR) that minimizes the absolute value of cosine similarity to disentangle two tasks and push two gradients vectors as orthogonal as possible. Extensive experiments conducted on two benchmarks show the effectiveness of our method in dark object detection. In particular, ISP-Teacher achieves an improvement of +2.4% AP and +3.3% AP over the SOTA method on BDD100k and SHIFT datasets, respectively.
+
+## 1. Envirmonment and Datasets
++ The code is based on [2PCNet](https://github.com/mecarill/2pcnet) (CVPR2023), *please refer to it for environment installation and dataset preparation.* In addition, some codes are borrowed from [MAET](https://github.com/cuiziteng/ICCV_MAET) (ICCV2021). **Many thanks for these great works!**
+
++ **In our setting:** 
+`Cuda=10.2, Python=3.8, Pytorch=1.10.1, Detectron2=0.6`
+
+## 2. Evaluation
++ For BDD100k, you could use your trained model or use ours pretrained model from: [Baiduyun]() or [Googledrive]()  
++ The command for evaluating ISP-Teacher on one RTX3090 GPU is as following:
+```
+python train_net.py --eval-only --config configs/faster_rcnn_R50_bdd100k.yaml MODEL.WEIGHTS <your weight>.pth
+```
+
+## 3. Train
++ The command for training ISP-Teacher on 4 RTX6000 GPUs is as following:
+```
+python train_net.py --num-gpus 4 --config configs/faster_rcnn_R50_bdd100k.yaml OUTPUT_DIR output/bdd100k
+```
+
+## 4. Citation
+If you find ISP-Teacher useful in your research, please consider citing:
+```
+@inproceedings{zhang2024isp,
+  title={ISP-Teacher: Image Signal Process with Disentanglement Regularization for Unsupervised Domain Adaptive Dark Object Detection},
+  author={Zhang, Yin and Zhang, Yongqiang and Zhang, Zian and Zhang, Man and Tian, Rui and Ding, Mingli},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={7},
+  pages={7387--7395},
+  year={2024}
+}
+```
