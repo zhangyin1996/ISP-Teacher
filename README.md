@@ -1,5 +1,5 @@
 # Updates
-+ **2025/02/09: The code of our extended version 'ISP Dynamic Teacher' can be found in [[ISP Dynamic Teacher](https://github.com/zhangyin1996/ISP-Dynamic-Teacher)]**
+## **2025/02/09: The code of our extended version 'ISP Dynamic Teacher' can be found in [[ISP Dynamic Teacher](https://github.com/zhangyin1996/ISP-Dynamic-Teacher)]**
 + 2024/03/29: Update environment requirements and label json file.
 + 2024/03/28: Code is available now.
 
