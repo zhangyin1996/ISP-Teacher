@@ -1,3 +1,8 @@
+# Updates
++ **2025/02/09: The code of our extended version 'ISP Dynamic Teacher' can be found in [[ISP Dynamic Teacher](https://github.com/zhangyin1996/ISP-Dynamic-Teacher)]**
++ 2024/03/29: Update environment requirements and label json file.
++ 2024/03/28: Code is available now.
+
 # ISP-Teacher
 [AAAI24] Official Pytorch Code for **ISP-Teacher: Image Signal Process with Disentanglement Regularization for Unsupervised Domain Adaptive Dark Object Detection**
 
@@ -7,10 +12,6 @@ Paper is available! [[Paper Link](https://ojs.aaai.org/index.php/AAAI/article/vi
 
 ## Abstract
 Object detection in dark conditions has always been a great challenge due to the complex formation process of low-light images. Currently, the mainstream methods usually adopt domain adaptation with Teacher-Student architecture to solve the dark object detection problem, and they imitate the dark conditions by using non-learnable data augmentation strategies on the annotated source daytime images. Note that these methods neglected to model the intrinsic imaging process, i.e. image signal processing (ISP), which is important for camera sensors to generate low-light images. To solve the above problems, in this paper, we propose a novel method named ISP-Teacher for dark object detection by exploring Teacher-Student architecture from a new perspective (i.e. self-supervised learning based ISP degradation). Specifically, we first design a day-to-night transformation module that consistent with the ISP pipeline of the camera sensors (ISP-DTM) to make the augmented images look more in line with the natural low-light images captured by cameras, and the ISP-related parameters are learned in a self-supervised manner. Moreover, to avoid the conflict between the ISP degradation and detection tasks in a shared encoder, we propose a disentanglement regularization (DR) that minimizes the absolute value of cosine similarity to disentangle two tasks and push two gradients vectors as orthogonal as possible. Extensive experiments conducted on two benchmarks show the effectiveness of our method in dark object detection. In particular, ISP-Teacher achieves an improvement of +2.4% AP and +3.3% AP over the SOTA method on BDD100k and SHIFT datasets, respectively.
-## Updates
-+ 2024/03/29: Update environment requirements and label json file.
-+ 2024/03/28: Code is available now.
-
 
 ## 1. Environment 
 + Detectron2==0.6  [[Install Link](https://detectron2.readthedocs.io/en/latest/tutorials/install.html)]  **Important !!!**
