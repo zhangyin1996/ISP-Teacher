@@ -2,6 +2,9 @@
 ## **2025/02/09: The code of our extended version 'ISP Dynamic Teacher' can be found in [[ISP Dynamic Teacher](https://github.com/zhangyin1996/ISP-Dynamic-Teacher)]**
 + 2024/03/29: Update environment requirements and label json file.
 + 2024/03/28: Code is available now.
++ 
+## Results
+![image text](https://github.com/zhangyin1996/ISP-Dynamic-Teacher/blob/main/results.jpg)
 
 # ISP-Teacher
 [AAAI24] Official Pytorch Code for **ISP-Teacher: Image Signal Process with Disentanglement Regularization for Unsupervised Domain Adaptive Dark Object Detection**
